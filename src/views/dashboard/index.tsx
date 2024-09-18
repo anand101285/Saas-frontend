@@ -16,11 +16,11 @@ const { RangePicker } = DatePicker;
 const { useBreakpoint } = Grid;
 
 /**
- * Dashboard component
+ * AppDashboard component
  *
  * @returns {React.FC} component to render
  */
-const Dashboard: React.FC = () => {
+const AppDashboard: React.FC = () => {
   const { selectedReportId } = useSelector(ReportSelector);
 
   const [loading, setLoading] = useState(false);
@@ -551,4 +551,4 @@ const Dashboard: React.FC = () => {
   );
 };
 
-export default Dashboard;
+export default AppDashboard;

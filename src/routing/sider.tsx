@@ -15,7 +15,7 @@ import {
   Secure
 } from 'assets/icons';
 import { UserRoles } from 'types';
-import { Dashboard } from 'views';
+
 import AppHardening from 'views/appHardening';
 import AppWhiteListing from 'views/appWhiteListing';
 import DailyBackups from 'views/dailyBackups';
@@ -23,6 +23,7 @@ import MacroMSOffice from 'views/macroMSOffice';
 import MFA from 'views/mfa';
 import PatchApplication from 'views/patchApp';
 
+import AppDashboard from 'views/dashboard';
 import PatchOS from 'views/patchOS';
 import Report from 'views/report';
 import RestrictPrivilege from 'views/restrictPrivilege';
@@ -38,7 +39,7 @@ type MenuItem = Required<MenuProps>['items'][number];
 export const siderClientRoutes: Array<SiderRoutes> = [
   {
     path: 'dashboard',
-    component: <Dashboard />,
+    component: <AppDashboard />,
     label: 'Dashboard',
     id: 'dashboard',
     index: true, // index will create it first route when navigating to /

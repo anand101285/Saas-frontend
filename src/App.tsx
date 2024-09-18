@@ -1,19 +1,20 @@
-import React, { useEffect } from 'react';
-import './App.css';
 import '@fontsource/chakra-petch';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { AuthLayout, DashboardLayout, VerifyEmail } from 'views';
+import './App.css';
 import { siderClientRoutes } from './routing';
 import { SiderRoutes } from './routing/types';
-import { AuthLayout, DashboardLayout, VerifyEmail } from 'views';
 
 // redux
-import { Provider } from 'react-redux';
 import { loadUser } from 'appRedux/actions/authAction';
 import store from 'appRedux/store';
+import { Provider } from 'react-redux';
 
 // middleware
-import RequireAuth from './utils/RequireAuth';
 import { Alert } from 'components';
+import RequireAuth from './utils/RequireAuth';
+import LandingSaas from 'views/landing/LandingSaas';
 // import { Landing } from 'views/landing/Landing';
 
 /**
@@ -61,7 +62,7 @@ const App: React.FC = () => {
               }>
               {developRoutes(siderClientRoutes)}
             </Route>
-            {/* <Route path="*" element={<Landing />} /> */}
+            <Route path="/landing" element={<LandingSaas />} />
           </Routes>
         </div>
       </BrowserRouter>
